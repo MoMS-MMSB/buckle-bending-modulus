@@ -17,7 +17,7 @@ echo 3 | gmx genion -s neutralise.tpr -p ../topol.top -neutral -o neutral.gro
 
 ## Make index; note you may need to adjust mdps in presence of ions
 echo -e "del 0-19\nr " + lipid + "\na W WF\nname 1 Solvent\na NA CL\nname 2 ION\nq " \
- | gmx make_ndx gmx make_ndx -f 1.init/neutral.gro
+ | gmx make_ndx -f 1.init/neutral.gro
 
 ### 2. Energy Minimise
 ###############################################################################################

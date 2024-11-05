@@ -57,9 +57,8 @@ compressed-x-precision   = 10000
 ; This selects the subset of atoms for the compressed
 ; trajectory file. You can select multiple groups. By
 ; default, all atoms will be written.
-compressed-x-grps        = DOPC
 ; Selection of energy groups
-energygrps               = DOPC Solvent
+energygrps               = Membrane Solvent
 
 ; NEIGHBORSEARCHING PARAMETERS
 ; cut-off scheme (Verlet: particle based cut-offs, group: using charge groups)
@@ -146,7 +145,7 @@ nsttcouple               = -1
 nh-chain-length          = 10
 print-nose-hoover-chain-variables = no
 ; Groups to couple separately
-tc-grps                  = DOPC Solvent
+tc-grps                  = Membrane Solvent
 ; Time constant (ps) and reference temperature (K)
 tau_t                    = 1.0  1.0
 ref_t                    = TEMP  TEMP
