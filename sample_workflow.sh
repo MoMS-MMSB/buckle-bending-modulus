@@ -56,10 +56,10 @@ gmx mdrun -v -deffnm 6.buckle_eq/buckle_eq
 ### 7. RESTRAINED FORCE PRODUCTION RUN (Fx)
 # This is the other simulation required for Kc calculation.
 ###############################################################################################
-mkdir 7.restrain
-gmx grompp -f mdp/restrain.mdp -c 6.buckle_eq/buckle_eq.gro -p topol.top -o 7.restrain/restrain.tpr
-gmx mdrun -v -deffnm 7.restrain/restrain
+mkdir 7.fx
+gmx grompp -f mdp/fx.mdp -c 6.buckle_eq/buckle_eq.gro -p topol.top -o 7.fx/fx.tpr
+gmx mdrun -v -deffnm 7.fx/fx
 
 ### Calculation:
 # if steps 4 and 7 have completed, you can call (some variation of) this command to calculate Kc:
-python calculate_kc.py -l 4.lx/lx.edr -f 7.restrain/restrain.edr 
+python calculate_kc.py -l 4.lx/lx.edr -f 7.fx/fx.edr 
