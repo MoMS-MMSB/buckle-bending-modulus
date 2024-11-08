@@ -3,7 +3,7 @@
 ; e.g.: -I/home/joe/doe -I/home/mary/roe
 include                  = 
 ; e.g.: -DPOSRES -DFLEXIBLE (note these variable names are case sensitive)
-define                   = -DM3_NO_CBT 
+define                   =
 
 ; RUN CONTROL PARAMETERS
 integrator               = sd
